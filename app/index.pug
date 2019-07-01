@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(charset="UTF-8")
+		title Document
+		link(href="https://fonts.googleapis.com/css?family=Lora:700|Montserrat:500,700&amp;subset=cyrillic" rel="stylesheet")
+		//- link(rel="stylesheet", href="css/vendor/animate.css")
+		link(rel="stylesheet" href="css/vendor/owl.carousel.css")
+		link(rel="stylesheet", href="css/vendor/owl.theme.default.css")
+		link(rel="stylesheet" href="css/vendor/bootstrap.min.css")
+		link(rel="stylesheet" href="css/style.css")
+	body
+		header.header
+			.contacts
+				.container
+					.logo-container
+						a.logo-link(href="#")
+							img(src="img/logo.png", alt="")
+					.content
+						.adress.d-none.d-md-flex Валдай, д. Усадье
+						a.tel.d-none.d-sm-inline-flex(href="tel:+7(912)3455678") +7 912 345 56 78
+						.soc-list
+							.item
+								a(href="#")
+									img(src="img/social-facebook.svg", alt="")
+							.item
+								a(href="#")
+									img(src="img/social-vkontakte.svg", alt="")
+							.item
+								a(href="#")
+									img(src="img/social-instagram.svg", alt="")
+			.menu
+				.container
+					nav
+						ul.main-menu.d-lg-flex
+							.close-button.d-block.d-lg-none
+								span
+							li
+								a(href="#") Об усадьбе
+							li
+								a(href="#") О Валдае
+							li
+								a(href="#") Домики и цены
+							li
+								a(href="#") Развлечения
+							li
+								a(href="#") Правила
+							li
+								a(href="#") Контакты
+							a.d-block.d-md-none.tel(href="tel:+7(912)3455678") +7 912 345 56 78
+						.burger-menu.d-block.d-lg-none
+							span
+		section(class="main")
+			.main-slider.owl-carousel
+				.item_1.item
+					.content
+						h1.item-title Русская усадьба
+							span
+								| с душой и традициями 
+								br
+								|настоящей русской избы
+					.tell-me-more Подробнее
+					.bg-filter
+				.item_2.item
+					.content
+						.item-title Квадроциклы
+					.bg-filter
+		section.booking
+			.container
+				h3 Забронируйте домик на берегу озера
+				form.booking-form(action="")
+					input(type="text" placeholder="Ваше имя" class="name")
+					input(type="tel" placeholder="Номер телефона" class="tel")
+					button.submit-button Забронировать
+				.info Перезвоним вам в течение одного рабочего дня, чтобы уточнить наличие мест
+		section.apartment
+			.container
+				h2 Наши домики
+				.apartment-list
+					.apartment-item
+						.content
+							.title Дом 
+								span с одной спальней
+							.img-container
+								img(src="img/apartment.jpg", alt="")
+							.details-list
+								.detail.detail_capacity до 4-х чел.
+								.detail.detail_couch диван-кровать
+								.detail.detail_place-quant 2 односпальные кровати
+							a.book-link(href="#") Забронировать
+					.apartment-item
+						.content
+							.title Дом 
+								span с одной спальней
+							.img-container
+								img(src="img/apartment.jpg", alt="")
+							.details-list
+								.detail.detail_capacity до 4-х чел.
+								.detail.detail_couch диван-кровать
+								.detail.detail_place-quant 2 односпальные кровати
+							a.book-link(href="#") Забронировать
+					.apartment-item
+						.content
+							.title Дом 
+								span с одной спальней
+							.img-container
+								img(src="img/apartment.jpg", alt="")
+							.details-list
+								.detail.detail_capacity до 4-х чел.
+								.detail.detail_couch диван-кровать
+								.detail.detail_place-quant 2 односпальные кровати
+							a.book-link(href="#") Забронировать
+		section.entertainment
+			.bg-list
+				.item.item_sauna.active
+				.item.item_quadbike
+				.item.item_cafe
+			.container
+				h2 Развлечения
+				.entertainment-list
+					.item(class="ent_sauna" data-name="sauna")
+						.img-container
+							img(src="img/ent-ico-sauna.svg", alt="")
+						.title Сауна
+						.desc Одиночные и групповые поездки по живописным окресностям
+					.item(class="ent_quad" data-name="quadbike")
+						.img-container
+							img(src="img/ent-ico-quad.svg", alt="")
+						.title Квадроцикл
+						.desc Одиночные и групповые поездки по живописным окресностям
+					.item(class="ent_food" data-name="cafe")
+						.img-container
+							img(src="img/ent-ico-food.svg", alt="")
+						.title Кафе
+						.desc Одиночные и групповые поездки по живописным окресностям
+		section.map-section
+			.map-container Карта
+			.container
+				form.map-section-form(action="")
+					h3 Забронируйте домик на берегу озера
+					input(class="name-input" type="text" placeholder="Ваше имя")
+					input(class="tel-input" type="tel" placeholder="Номер телефона")
+					.info Перезвоним вам в течение одного рабочего дня, чтобы уточнить наличие мест
+					button.submit-button Забронировать
+		section.forest
+		footer.footer
+			.container.footer-content
+				a.logo-container(href="#") Русская усадьба
+				.content
+					.contact-row
+						a.tel(href="tel:+7(912)3455678") +7 912 345 56 78
+						.adress Валдай, д. Усадье
+					.footer-info
+						.item
+						.item
+					.soc-list
+						.item
+							a(href="#")
+								img(src="img/social-facebook.svg", alt="")
+						.item
+							a(href="#")
+								img(src="img/social-vkontakte.svg", alt="")
+						.item
+							a(href="#")
+								img(src="img/social-instagram.svg", alt="")
+		script(src="js/vendor/jquery-3.2.1.min.js")
+		script(src="js/vendor/owl.carousel.min.js")
+		script(src="js/main.js")

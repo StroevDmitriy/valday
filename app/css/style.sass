@@ -1,0 +1,1005 @@
+html,body,
+div,span,p,a,
+applet,
+object,
+iframe,
+h1,h2,h3,h4,h5,h6,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+caption,table,tr,th,td,thead,tbody,tfoot,
+article,aside,canvas,details,embed,
+figure,figcaption,footer,header,hgroup,
+menu,nav,
+output,
+ruby,
+section,article,
+summary,
+time,
+mark,
+audio,video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+header,footer,section,article
+aside,
+details,
+figcaption,
+figure,
+hgroup,
+menu,nav
+	display: block
+
+body
+	line-height: 1
+	font-family: 'Montserrat', sans-serif
+	font-size: 15px
+	font-weight: 500
+
+blockquote,
+q
+	quotes: none
+
+ol,ul
+	list-style: none
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+a,
+a:visited
+	color: #000
+	text-decoration: none
+	-webkit-transition: all .4s ease-in-out
+	transition: all .4s ease-in-out
+
+a:hover,
+a:visited:hover
+	@media(hover)
+		color: #bbb
+		text-decoration: none
+
+a:focus
+	outline: 0
+
+input
+	outline: none
+
+*
+	-webkit-transition: all .4s ease-in-out
+	transition: all .4s ease-in-out
+
+body
+	position: relative
+
+@keyframes fadeIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+.fadeIn
+	animation-name: fadeIn
+
+@keyframes fadeOut
+	from
+		opacity: 1
+	to
+		opacity: 0
+.fadeOut 
+	animation-name: fadeOut
+
+.overflow-hidden
+	overflow: hidden
+
+h2
+	position: relative
+	color: #95B73C
+	font-size: 27px
+	font-family: Lora
+	font-weight: 700
+	padding-top: 24px
+	width: max-content
+	width: -moz-max-content
+	max-width: 80%
+	margin: auto
+	&:before
+		position: absolute
+		content: ''
+		top: -2.5px
+		width: 100%
+		height: 5px
+		background-color: #95B73C
+
+.header
+	z-index: 1000
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	.contacts
+		display: flex
+		align-items: center
+		position: relative
+		height: 53px
+		background-color: #95B73C
+		.content
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			color: #fff
+			font-size: 13px
+			.adress, .tel
+				position: relative
+				display: flex
+				align-items: center
+				min-height: 30px
+				margin-right: 70px
+				font-weight: 500
+			.adress
+				padding-left: 25px
+				background-image: url('../img/ico-geo.svg')
+				background-repeat: no-repeat
+				background-size: 17px 23px
+				background-position: left center
+				@media screen and (max-width: 991px)
+					margin-right: 30px
+				// &:before
+				// 	position: absolute
+				// 	content: ''
+				// 	left: 0
+				// 	top: 0
+				// 	height: 30px
+				// 	width: 30px
+				// 	border-radius: 50%
+				// 	background-color: rgba(255,255,255,.6)
+			.tel
+				position: relative
+				color: #fff
+				font-family: Montserrat
+				font-size: 17px
+				font-weight: 700
+				&:after
+					position: absolute
+					content: ''
+					bottom: 0
+					left: 50%
+					width: 0%
+					height: 1px
+					background-color: #fff
+					transition: all .4s
+				&:hover:after
+					@media(hover)
+						width: 100%
+						left: 0px
+			.soc-list
+				display: flex
+				align-items: center
+				justify-content: flex-end
+				.item
+					height: 24px
+					width: 24px
+					&:not(:last-child)
+						margin-right: 16px
+					&:hover
+						@media(hover)
+							transform: scale(1.2)
+					a
+						display: block
+						img
+							height: 100%
+							width: 100%
+	.menu
+		// position: relative
+		display: flex
+		align-items: center
+		height: 58px
+		background-color: rgba(99,51,28,.76)
+		.container
+			height: 100%
+		nav
+			height: 100%
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			.main-menu
+				display: flex
+				justify-content: flex-end
+				@media screen and (max-width: 991px)
+					flex-flow: column
+					height: 100vh
+					background-color: rgba(99, 51, 28, 0.95)
+					position: fixed
+					top: 0
+					width: 40%
+					align-items: center
+					justify-content: flex-start
+					right: -40%
+					z-index: 1500
+					overflow: scroll
+					padding: 80px 0 40px
+				@media screen and (max-width: 767px)
+					width: 50%
+					right: -50%
+				@media screen and (max-width: 575px)
+					width: 80%
+					right: -80%
+				&.active
+					right: 0
+				.close-button
+					width: 28px
+					position: absolute
+					top: 80px
+					right: 40px
+					@media screen and (max-width: 575px)
+						z-index: 1000
+						right: 10px
+					span
+						display: block
+						height: 3px
+						width: 100%
+						background-color: #fff
+						border-radius: 2px
+						transform: rotate(45deg)
+						&:after
+							content: ''
+							height: 3px
+							width: 100%
+							background-color: #fff
+							transform: rotate(-90deg)
+							top: 0px
+							position: absolute
+							width: 100%
+							left: 0px
+				li
+					&:not(:last-of-type)
+						margin-right: 40px
+						@media screen and (max-width: 991px)
+							margin-right: 0
+							margin-bottom: 30px
+					a
+						position: relative
+						color: #fff
+						font-size: 13px
+						font-weight: 500
+						text-decoration: none
+						@media screen and (max-width: 991px)
+							font-size: 16px
+						&:after
+							position: absolute
+							content: ''
+							bottom: -5px
+							left: 50%
+							width: 0%
+							height: 1px
+							background-color: #fff
+							transition: all .4s
+						&:hover:after
+							@media(hover)
+								width: 100%
+								left: 0px
+				a.tel
+					display: block
+					margin-top: 80px
+					color: #fff
+					text-decoration: none
+		.burger-menu
+			position: absolute
+			right: 0
+			height: 22px
+			width: 28px
+			top: 50%
+			margin-top: -11px
+			cursor: pointer
+			z-index: 500
+			@media screen and (max-width: 767px)
+				margin-top: -12px
+			span
+				margin: auto 0
+				display: block
+				height: 3px
+				width: 100%
+				background-color: #fff
+				border-radius: 2px
+			span:before
+				content: ''
+				position: absolute
+				top: 50%
+				margin-top: -1px
+				height: 3px
+				width: 100%
+				background-color: #fff
+				border-radius: 2px
+				transition: all .3s
+			span:after
+				content: ''
+				position: absolute
+				bottom: 0
+				height: 3px
+				width: 100%
+				background-color: #fff
+				border-radius: 2px
+				transition: all .3s
+			&.active
+				opacity: 0
+	.logo-container
+		position: absolute
+		top: 15px
+		@media screen and (max-width: 767px)
+			top: 35px
+		.logo-link
+			display: block
+			height: 141px
+			width: 140px
+			@media screen and (max-width: 1199px)
+				height: 120px
+				width: 120px
+			@media screen and (max-width: 767px)
+				height: 100px
+				width: 100px
+			img
+				height: 100%
+				width: 100%
+.main
+	.main-slider
+		position: relative
+		display: flex
+		justify-content: center
+		.item
+			position: relative
+			z-index: 100
+			display: flex
+			flex-flow: column
+			align-items: center
+			justify-content: center
+			background-repeat: no-repeat
+			background-size: cover
+			background-position: center bottom
+			height: 100vh
+			width: 100vw
+			min-height: calc(372px + 190px)
+			padding: calc(111px + 40px) 0 40px
+			@media screen and (max-width: 991px)
+				min-height: max-content 
+				padding-bottom: 140px
+			.item-title
+				position: relative
+				color: #fff
+				font-family: Lora
+				font-size: 67px
+				text-align: center
+				@media screen and (max-width: 1199px)
+					font-size: 60px
+				@media screen and (max-width: 767px)
+					font-size: 50px
+				@media screen and (max-width: 575px)
+					font-size: 32px
+				&:before
+					position: absolute
+					content: ''
+					width: 137px
+					height: 3px
+					background-color: #fff
+					left: 50%
+					margin-left: -68px
+					top: -10px
+				span
+					display: block
+					font-size: 33px
+					line-height: 1.2
+					margin-top: 15px
+					@media screen and (max-width: 1199px)
+						font-size: 28px
+					@media screen and (max-width: 575px)
+						font-size: 22px
+			.bg-filter
+				position: absolute
+				z-index: 400
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: rgba(99,51,28,.39)
+			.content
+				position: relative
+				z-index: 500
+				margin-bottom: 15px
+			.tell-me-more
+				position: relative
+				z-index: 900
+				cursor: pointer
+				display: flex
+				align-items: center
+				justify-content: center
+				padding: 10px 50px
+				background-color: #94B63B
+				color: #fff
+				font-size: 15px
+				user-select: none
+				&:hover
+					@media(hover)
+						box-shadow: inset 0px 0px 100px rgba(0,0,0,.3)
+			&.item_1
+				background-image: url('../img/main-bg.jpg')
+			&.item_2
+				background-image: url('../img/kvadr.jpg')
+			&.item_3
+				background-image: url('../img/main-bg.jpg')
+		.owl-item
+			z-index: 600
+		.slider-nav
+			position: absolute
+			top: 190px
+			z-index: 0
+			height: 0
+			margin: auto
+			@media screen and (max-width: 991px)
+				position: absolute
+				top: auto
+				z-index: 0
+				height: 0
+				display: flex
+				bottom: 120px
+				margin-top: -50px
+				justify-content: center
+			.owl-dot
+				position: relative
+				z-index: 500
+				height: 100px
+				width: 100px
+				border-radius: 50%
+				margin-bottom: 24px
+				margin-left: 20px
+				background-color: #94B63B
+				&:before
+					text-align: center
+				@media screen and (max-width: 1199px)
+					margin-left: 10px
+				@media screen and (max-width: 991px)
+					margin: 0 20px
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0
+				@media screen and (max-width: 575px)
+					// height: 100px
+					// width: 90px
+					margin: 0 10px
+				&:hover
+					@media(hover)
+						box-shadow: inset 0px 0px 100px rgba(0,0,0,.3)
+		.owl-dot:before
+			position: absolute
+			display: flex
+			align-items: flex-start
+			justify-content: center
+			height: 100%
+			width: 100%
+			color: #fff
+			font-size: 10px
+			font-weight: 700
+			background-repeat: no-repeat
+			background-size: 46px
+			background-position: center 16px
+			padding-top: 67px
+		.owl-dot:nth-child(1):before
+			background-image: url('../img/main-icon-houses.svg')
+			content: 'База отдыха'
+		.owl-dot:nth-child(2):before
+			background-image: url('../img/main-icon-quad.svg')
+			content: 'Квадроциклы'
+.booking
+	background-color: #BF9766
+	background-color: rgba(191, 151, 102, .65)
+	padding: 24px 0
+	h3
+		color: #fff
+		font-family: Lora
+		font-size: 20px
+		font-weight: 700
+		margin-bottom: 20px
+	form.booking-form
+		display: flex
+		margin-bottom: 16px
+		@media screen and (max-width: 991px)
+			flex-flow: wrap
+			justify-content: space-between
+		input
+			padding: 12px 18px 12px
+			min-width: 320px
+			height: 42px
+			margin-right: 14px
+			border: none
+			@media screen and (max-width: 991px)
+				&.tel
+					margin-right: 0
+			@media screen and (max-width: 767px)
+				width: 100%
+				&.name
+					margin-right: 0
+					margin-bottom: 20px
+			@media screen and (max-width: 575px)
+				min-width: auto
+				&.name
+					margin-bottom: 20px
+					margin-right: 0
+			&::placeholder
+				color: #BF9766
+			// &:focus::placeholder
+				// color: transparent
+		.submit-button
+			min-height: 42px
+			border: none
+			padding: 12px 35px
+			margin-left: auto
+			background-color: #94B63B
+			color: #fff
+			@media screen and (max-width: 991px)
+				margin-top: 20px
+				margin-left: auto
+			&:hover
+				@media(hover)
+					box-shadow: inset 0px 0px 100px rgba(0,0,0,.3)
+					cursor: pointer
+	.info
+		color: #fff
+		font-size: 13px
+		font-weight: 500
+.apartment
+	padding-bottom: 120px
+	@media screen and (max-width: 767px)
+		padding-bottom: 100px
+	h2
+		margin-bottom: 85px
+	.apartment-list
+		display: flex
+		justify-content: flex-start
+		@media screen and (max-width: 991px)
+			flex-flow: wrap
+			justify-content: center
+		.apartment-item
+			display: block
+			padding-top: 57px
+			padding-bottom: 88px
+			margin: 0px 13px
+			width: 33.333%
+			background: url('../img/card-bg.png') center top/312px no-repeat, url('../img/card-bg-bottom.png') center bottom/318px no-repeat
+			&:nth-child(1)
+				margin-left: 0
+			&:nth-child(3)
+				margin-right: 0
+			@media screen and (max-width: 991px)
+				width: calc(50% - 13px)
+				margin-bottom: 20px
+				&:nth-child(2n-1)
+					margin-left: 0
+					margin-right: 12px
+					&:last-child
+						margin: auto
+				&:nth-child(2n)
+					margin-right: 0
+					margin-left: 12px
+			@media screen and (max-width: 767px)
+				width: 80%
+				margin: auto
+				padding-top: 72px
+				padding-bottom: 0
+				background: url('../img/card-bg.png') center top/400px no-repeat
+				&:nth-child(2n-1)
+					margin: auto
+				&:nth-child(2n)
+					margin: auto
+				&:not(:last-child)
+					margin-bottom: 60px
+			@media screen and (max-width: 575px)
+				width: 100%
+				background: url('../img/card-bg.png') center top/280px no-repeat
+				padding-top: 50px
+			.content
+				padding: 12px 12px
+				border: 1px solid #F8E5CD
+				.title
+					margin-bottom: 12px
+					color: #5B3421
+					font-size: 19px
+					font-weight: 700
+					span
+						font-size: 15px
+						font-weight: 500
+				.img-container
+					display: flex
+					margin-bottom: 26px
+					width: 100%
+					height: 290px
+					@media screen and (max-width: 767px)
+						height: 320px
+					img
+						object-fit: cover
+						object-position: center
+						width: 100%
+				.details-list
+					margin-bottom: 40px
+					.detail
+						color: #5B3421
+						position: relative
+						padding-left: 46px
+						display: flex
+						align-items: center
+						min-height: 37px
+						background-repeat: no-repeat
+						&:not(:last-child)
+							margin-bottom: 30px
+					.detail_capacity
+						background-position: 8px center
+						background-image: url('../img/desc-ico-profile.svg')
+						background-size: 22px 21px
+					.detail_couch
+						background-position: 3px center
+						background-image: url('../img/desc-ico-sofa.svg')
+						background-size: 29px 18px
+					.detail_place-quant
+						background-position: left center
+						background-image: url('../img/desc-ico-bedroom.svg')
+						background-size: 35px 18px
+				.book-link
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 12px 20px
+					background-color: #94B63B
+					width: 100%
+					color: #fff
+					&:hover
+						@media(hover)
+							box-shadow: inset 0px 0px 100px rgba(0,0,0,.3)
+.entertainment
+	position: relative
+	padding-bottom: 100px
+	@media screen and (max-width: 767px)
+		padding-bottom: 80px
+	.bg-list
+		position: absolute
+		width: 100%
+		height: 100%
+		.item
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 100
+			height: 100%
+			width: 100%
+			background-size: cover
+			background-position: center
+			opacity: 0
+			transition: all 1s
+		.item.active
+			opacity: 1
+		.item_quadbike
+			background-image: url('../img/main-bg.jpg')
+		.item_sauna
+			background-image: url('../img/sauna.jpg')
+		.item_cafe
+			background-image: url('../img/kvadr.jpg')
+	h2
+		color: #fff
+		margin-bottom: 90px
+		z-index: 100
+		@media screen and (max-width: 575px)
+			margin-bottom: 50px
+	.entertainment-list
+		position: relative
+		z-index: 500
+		display: flex
+		justify-content: space-between
+		@media screen and (max-width: 767px)
+			flex-flow: wrap
+			justify-content: space-around
+		@media screen and (max-width: 575px)
+			flex-flow: column
+			align-items: center
+		.item
+			display: flex
+			flex-flow: column
+			align-items: center
+			width: 33.333%
+			margin: 0 20px
+			color: #fff
+			text-align: center
+			&:nth-child(1)
+				margin-left: 0
+			&:nth-child(3)
+				margin-right: 0
+			@media screen and (max-width: 767px)
+				width: 45%
+				margin-bottom: 20px
+				&:nth-child(1)
+					margin: 0
+				&:nth-child(3)
+					margin: 0
+				&:nth-child(2n)
+					margin-left: 10px
+					margin-right: 0px
+				&:nth-child(2n-1)
+					margin-left: 0px
+					margin-right: 10px
+			@media screen and (max-width: 575px)
+				width: 90%
+				&:nth-child(1)
+					margin: auto
+				&:nth-child(3)
+					margin: auto
+				&:nth-child(2n)
+					margin: auto
+				&:nth-child(2n-1)
+					margin: auto
+				&:not(:last-child)
+					margin-bottom: 60px
+			.img-container
+				display: flex
+				align-items: center
+				justify-content: center
+				height: 140px
+				width: 200px
+				margin-bottom: 23px
+				@media screen and (max-width: 1199px)
+					height: 140px
+				@media screen and (max-width: 991px)
+					height: 100px
+				img
+					height: 100%
+			// &.ent_sauna
+			// 	.img-container
+			// 		img
+			// 			width: 148px
+			// &.ent_quad
+			// 	.img-container
+			// 		img
+			// 			width: 135px
+			// &.ent_food
+			// 	.img-container
+			// 		img
+			// 			width: 198px
+			// @media screen and (max-width: 991px)
+			// 	.img-container
+			// 		img
+			// 			width: 120px
+			.title
+				margin-bottom: 11px
+				font-family: Montserrat
+				font-size: 25px
+				font-weight: 700
+.map-section
+	position: relative
+	padding: 110px 0px
+	@media screen and (max-width: 767px)
+		padding: 0
+		background-image: url('../img/forest.jpg')
+		background-repeat: no-repeat
+		background-position: center bottom
+		background-size: auto 60%
+	.map-container
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 100
+		width: 100%
+		height: 100%
+		background-color: #cecece
+		display: flex
+		align-items: center
+		justify-content: center
+		padding-left: 100px	
+		@media screen and (max-width: 991px)
+			padding-left: 300px
+		@media screen and (max-width: 767px)
+			position: relative
+			height: 400px
+			padding-left: 0
+	.map-section-form
+		position: relative
+		z-index: 200
+		padding: 35px 55px 50px
+		background-color: #D5BB9A
+		max-width: 380px
+		color: #fff
+		line-height: 1.2
+		@media screen and (max-width: 767px)
+			margin: auto
+		@media screen and (max-width: 575px)
+			padding: 35px 25px 50px
+		h3
+			font-family: Lora
+			font-size: 20px
+			font-weight: 700
+			text-align: center
+			margin-bottom: 40px
+		input
+			width: 100%
+			border: none
+			padding: 12px 18px 12px
+			height: 42px
+			margin-bottom: 30px
+			&.tel-input
+				margin-bottom: 12px
+			&::placeholder
+				color: #BF9766
+		.info
+			font-size: 13px
+			margin-bottom: 40px
+		.submit-button
+			display: block
+			min-height: 42px
+			max-width: 195px
+			border: none
+			padding: 12px 35px
+			margin-left: auto
+			background-color: #94B63B
+			color: #fff
+			&:hover
+			@media(hover)
+					box-shadow: inset 0px 0px 100px rgba(0,0,0,.3)
+					cursor: pointer
+.forest
+	height: 300px
+	width: 100%
+	background-image: url('../img/forest.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	@media screen and (max-width: 767px)
+		display: none
+.footer
+	background-color: #401D0E
+	padding: 38px 0 60px
+	.footer-content
+		display: flex
+		align-items: center
+		justify-content: space-between
+		@media screen and (max-width: 991px)
+			flex-flow: column
+	.logo-container
+		display: inline-flex
+		align-items: center
+		padding-left: 100px
+		background-image: url('../img/logo.png')
+		background-position: left center
+		background-repeat: no-repeat
+		background-size: 80px
+		min-height: 80px
+		color: #FCA677
+		font-family: Lora
+		font-size: 27px
+		font-weight: 700
+		transition: all .4s
+		&:hover
+			@media(hover)
+				text-decoration: none
+		@media screen and (max-width: 575px)
+			background-size: 60px
+			min-height: 60px
+			padding-left: 80px
+			font-size: 24px
+		&:hover
+			@media(hover)
+				color: #FCA677
+		@media screen and (max-width: 991px)
+			margin-bottom: 20px
+	.content
+		.soc-list
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			.item
+				height: 24px
+				width: 24px
+				&:not(:last-child)
+					margin-right: 16px
+				&:hover
+					@media(hover)
+						transform: scale(1.2)
+			@media screen and (max-width: 575px)
+				justify-content: center
+		.footer-info
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			margin-bottom: 40px
+			@media screen and (max-width: 575px)
+				flex-flow: column
+			.item
+				height: 30px
+				width: 202px
+				background-color: rgba(255,255,255,.61)
+				border-radius: 4px
+				&:not(:last-child)
+					margin-right: 32px
+					@media screen and (max-width: 575px)
+						margin: auto auto 20px
+				@media screen and (max-width: 575px)
+					width: 200px
+		.contact-row
+			margin-bottom: 30px
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			color: #fff
+			@media screen and (max-width: 575px)
+				flex-flow: column
+			.adress, .tel
+				position: relative
+				display: flex
+				align-items: center
+				min-height: 30px
+				padding-left: 40px
+				font-weight: 500
+				@media screen and (max-width: 575px)
+					padding-left: 0px
+			.adress
+				padding-left: 25px
+				background-image: url('../img/ico-geo.svg')
+				background-repeat: no-repeat
+				background-size: 17px 23px
+				background-position: left center
+			.tel
+				position: relative
+				color: #fff
+				font-family: Montserrat
+				font-size: 17px
+				font-weight: 700
+				margin-right: 70px
+				text-decoration: none
+				// @media(hover)
+				@media screen and (max-width: 991px)
+					margin-right: 50px
+				@media screen and (max-width: 575px)
+					margin: auto auto 10px
+				&:after
+					position: absolute
+					content: ''
+					bottom: 0
+					left: 50%
+					width: 0%
+					height: 1px
+					background-color: #fff
+					transition: all .4s
+				&:hover:after
+					@media(hover)
+						width: calc(100% - 40px)
+						left: 40px
