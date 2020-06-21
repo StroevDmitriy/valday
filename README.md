@@ -1,4 +1,2 @@
 # valday
-Interface and markup for Russkaya Usadba - Valday's guest house.  
-  
-Project contains one main page
+Interface and markup for Russkaya Usadba index page - Valday's guest house.  
