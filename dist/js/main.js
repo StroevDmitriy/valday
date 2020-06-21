@@ -2,7 +2,6 @@
 
 jQuery(document).ready(function(){
 	//Установка правильного размера окна
-
 	function resizemain() {
 		jQuery(".main").css({"min-height":jQuery(window).innerHeight()});
 		}
