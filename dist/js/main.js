@@ -8,16 +8,14 @@ jQuery(document).ready(function(){
 		}
 		resizemain();
 		jQuery(window).resize(function() {
-		 resizemain();
+		resizemain();
 	});
 
 
 // jQuery(window).load(function(){
 	jQuery(".main-slider").owlCarousel({
 		loop:true,
-		// nav: true,
 		dots: true,
-		// navText : true,
 		autoHeight: true,
 		items: 1,
 		mouseDrag: false,
